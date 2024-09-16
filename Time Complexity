@@ -1,4 +1,13 @@
-Based on Input data size , running time of the algorithm increases .
+Time Complexity : Based on Input data size , running time of the algorithm increases .
+
+Types of Big O Notation :
+
+1)O(1)       - Constant Time 
+2)O(log n)   - Logarthmic n 
+3)O(n)       - Linear Time 
+4)O(n log n) - Linearithmic Time 
+5)O(n^2)     - Quadratic Time 
+6)O(2^n)     - Exponential Time 
 
 Big O Notation defines the running time 
 
@@ -34,4 +43,14 @@ Examples :
 
 ----------------------------------------------------------------------------------------------------------------------
 
+O(log n) ---> Here log 8 to the base 2 is 3 . That is 2^3 is 8 .
+
+Example :
+
+Binary Search Sorted -
+
+mid = (start + end)/2 
+mid < target --->search right half 
+mid > target --->search left half 
+mid ==  target ---> return mid values 
 
