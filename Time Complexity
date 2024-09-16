@@ -1,1 +1,5 @@
+Based on Input data size , running time of the algorithm increases .
 
+Big O Notation defines the running time 
+
+O(1) ---> constant time complexity ---> Execution time of the algorithm is constant and doesnt depend upon 
