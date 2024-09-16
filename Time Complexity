@@ -2,4 +2,36 @@ Based on Input data size , running time of the algorithm increases .
 
 Big O Notation defines the running time 
 
-O(1) ---> constant time complexity ---> Execution time of the algorithm is constant and doesnt depend upon 
+---------------------------------------------------------------------------------------------------------------------
+O(1) ---> constant time complexity ---> Execution time of the algorithm is constant and doesnt depend upon the input .
+How large the input is the time taken to complete the operation remains the same .
+
+Examples: 
+1)Returning the first element in the list . num[0] will return a value which consume same amount of time ,how long the array 
+is either 30 or 100 .
+2)To access an element in an array by its index -> num[5] = it directly checks the address and it doesnt do traversing 
+along the elements .
+for example :
+      size of each element is 2 bytes .
+      address = base_address + (index * element size )
+      address = 4000 + (5 * 2)
+      address = 4010 
+3)To check the number is even or odd - It puts the given value in the below 
+      num % 2 == 0 and says whether it is odd or even .How big the number is it gives the same value in same time .
+4)Incrementing a counter - everytime adds a single element to the value .
+5)Setting a value in a dictionary .Setting a key value pair is going to consume the same amount of time .
+
+---------------------------------------------------------------------------------------------------------------------
+
+O(n) ---> linear time complexity , Execution time of the algorithm grows linearly with the size of the input data .
+If the input data doubles the time to complete the operation also doubles .
+
+Examples :
+1)Summing Elements of the list - Need to traverse all elements and sum up .
+2)To Search a target element / Linear search in an Array .
+3)To Find the largest Element .
+4)Printing all elements in a list .
+
+----------------------------------------------------------------------------------------------------------------------
+
+
