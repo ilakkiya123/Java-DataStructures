@@ -156,8 +156,46 @@ class Hello{
 
 
 Tips :
+//Logic - In every outer loop iteration we plan to bring the smallest value to the right (If sorting in desc ) , 
+But swapping is done on all the elements in the inner loop .
 
 When Trying to arrange in asc order , then on first outer loop iteration max value goes to the right.
 When Trying to arrange in desc order , then on first outer loop iteration min value goes to the right . 
 ---------------------------------------------------------------------------------------------------------------
 Selection Sort :
+
+// Here the logic is in the outer loop we will check which is the smallest value and will bring it to the left or largest value to the right .
+Swap happens only once in the outer loop , In inner loop we check the smallest .
+
+class Hello{
+    public static void main(String args[]){
+        int nums[] = {6,5,2,8,3,7};
+        int temp = 0 ;
+        System.out.println("Before Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+
+        int temp_index = -1 ;
+        for(int i=0;i<nums.length;i++){
+            temp_index = i ;
+            for(int j=i+1;j<nums.length;j++){
+//this below line we are checking if the num[j] is smallest if so we are making to point the temp index to the smallest value 
+                if(nums[temp_index] > nums[j]){
+                     temp_index = j ;   
+                }
+            }
+            temp = nums[i];
+
+            nums[i] = nums[temp_index];
+            nums[temp_index] = temp ;
+        }
+
+     
+        System.out.println();
+        System.out.println("After Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+}
