@@ -162,7 +162,7 @@ But swapping is done on all the elements in the inner loop .
 When Trying to arrange in asc order , then on first outer loop iteration max value goes to the right.
 When Trying to arrange in desc order , then on first outer loop iteration min value goes to the right . 
 ---------------------------------------------------------------------------------------------------------------
-Selection Sort :
+Selection Sort : (Time Complexity - O(n2)
 
 // Here the logic is in the outer loop we will check which is the smallest value and will bring it to the left or largest value to the right .
 Swap happens only once in the outer loop , In inner loop we check the smallest .
