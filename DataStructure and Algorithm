@@ -111,6 +111,10 @@ class Hello{
 
 ----------------------------------------------------------------------------------------------------------
 Bubble Sort :
+Time Complexity  O(n2) - Quadratic Time Complexity 
+
+//Here for every outer loop increment by 1 , In inner loop we check every near by 2 elements and swap to bring the largest element to the right .
+By doing this each outer loop iteration we bring largest element to the right most .But inner loop does the swap .
 
 Basically In bubble sort we compare first 2 elements and swap the largest num to the right , If we want to arrange them in asc order .
 First compares index - 0 and index - 1 
@@ -149,3 +153,11 @@ class Hello{
         }
     }
 }
+
+
+Tips :
+
+When Trying to arrange in asc order , then on first outer loop iteration max value goes to the right.
+When Trying to arrange in desc order , then on first outer loop iteration min value goes to the right . 
+---------------------------------------------------------------------------------------------------------------
+Selection Sort :
