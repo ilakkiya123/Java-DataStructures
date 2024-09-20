@@ -109,4 +109,43 @@ class Hello{
     }
 }
 
+----------------------------------------------------------------------------------------------------------
+Bubble Sort :
 
+Basically In bubble sort we compare first 2 elements and swap the largest num to the right , If we want to arrange them in asc order .
+First compares index - 0 and index - 1 
+Next it compares index - 1 and index - 2 , It compares until the last element .
+
+Outer loop makes it to run that many times (6 complete traverse it does , each time it tries to bring the largest num to the right corner )
+Innner loop does the swapping btw 2 elements .
+
+class Hello{
+    public static void main(String args[]){
+        int nums[] = {9,5,7,13,27,14};
+        System.out.println("Before Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+
+        int temp = 0 ;
+
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<nums.length-1;j++){
+                if(nums[j] > nums[j+1]){
+                    temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp ;
+                }
+            }
+            // System.out.println();
+            // for(int n : nums){
+            //     System.out.print(n + " ");
+            // }
+        }
+        System.out.println();
+        System.out.println("After Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+}
