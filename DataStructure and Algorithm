@@ -239,3 +239,56 @@ If this line comes like this while ( array[j] > key && j >= 0 ) , it throws Arra
     }
 }
 
+---------------------------------------------------------------------------------------------------------------------------
+
+//Quick Sort 
+class Hello{
+    public static void main(String args[]){
+        int nums[] = {5,6,2,3,1,8,4};
+        int size = nums.length;
+        System.out.println("Before Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+     
+        quicksort(nums,0,nums.length-1);
+
+        
+
+        System.out.println();
+        System.out.println("After Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+
+    public static void  quicksort(int[] nums , int low , int high){
+           if(low<high){
+            int pi = partition(nums, low, high);
+            quicksort(nums, low, pi-1);
+            quicksort(nums, pi+1, high);
+           }
+    }
+
+    public static int partition(int nums[] , int low , int high ){
+            int pivot = nums[high];
+            int temp = 0 ;
+            int i = low - 1;
+            int j;
+            for(j = low ; j<high ; j++){
+
+                if(nums[j] < pivot){
+                        i++ ;
+                        temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp ;
+                }
+            }
+                temp = nums[i+1];
+                nums[i+1] = nums[high];
+                nums[high] = temp ;
+
+                return i+1;
+            
+    }
+}
