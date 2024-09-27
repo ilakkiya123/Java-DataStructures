@@ -199,3 +199,43 @@ class Hello{
         }
     }
 }
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Insertion Sort :
+
+Here outer loop starts from index 1 and inner loop starts from previous index (first index) .
+
+Now we check if it is oth index > 1st index , If it is greater and condt is true , then we save that in key and bring the greater num and we shift elements .
+
+//Insertion Sort 
+class Hello{
+    public static void main(String args[]){
+        int nums[] = {5,6,2,3,1};
+        int size = nums.length;
+        System.out.println("Before Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+
+        for(int i=1;i<size;i++){
+            int key = nums[i];
+            int j=i-1;
+
+//Here this line j>=0 should be come first otherwise we face Array Index Out Of Bound Exception .As in java while loop condt is validatedd from left to right .
+If this line comes like this while ( array[j] > key && j >= 0 ) , it throws ArrayIndexOutOf Bound exception , because arr[-1] will come .
+            while(j>=0 && nums[j] > key){
+                nums[j+1] = nums[j];
+                j--;
+            }
+            nums[j+1] = key ;
+        }
+       
+        System.out.println();
+        System.out.println("After Sorting");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+}
+
