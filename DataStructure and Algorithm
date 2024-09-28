@@ -162,8 +162,8 @@ But swapping is done on all the elements in the inner loop .
 When Trying to arrange in asc order , then on first outer loop iteration max value goes to the right.
 When Trying to arrange in desc order , then on first outer loop iteration min value goes to the right . 
 
-
-Logic to check the changes in inner and outer loop 
+------------------------------------------------------------------------------------------------------------------------------------------
+To sort and print in ascending order (Logic to check the changes in inner and outer loop included)
 
 class Hello{
     public static void main(String srgs[]){
@@ -249,6 +249,54 @@ j-> 4 ---> 14 15 27 78 91 113
 14 15 27 78 91 113
 
 After Sorting ---> 14 15 27 78 91 113
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+To print the elements in descending order :
+
+class Hello{
+    public static void main(String srgs[]){
+        int nums[] = {91,15,78,113,27,14};
+        int size = nums.length;
+
+        System.out.print("Before Sorting ---> ");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+        System.out.println();
+        int temp = 0 ; 
+        for(int i=0;i<nums.length-1;i++){
+            System.out.println("i-> " + i);
+            for(int j=size-1;j>0;j--){
+                if(nums[j] > nums[j-1]){
+                    temp = nums[j];
+                    nums[j] = nums[j-1];
+                    nums[j-1] = temp ;
+                } 
+                System.out.print("j-> " + j + " ---> ");
+                for(int n : nums){
+                    System.out.print(n + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            for(int n : nums){
+                System.out.print(n + " ");
+            }
+            System.out.println();
+            size -- ;
+        }
+
+        System.out.println();
+        System.out.print("After Sorting ---> ");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+}
+
+O/P :
+
+
 ---------------------------------------------------------------------------------------------------------------
 Selection Sort : (Time Complexity - O(n2)
 
