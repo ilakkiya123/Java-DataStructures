@@ -161,6 +161,94 @@ But swapping is done on all the elements in the inner loop .
 
 When Trying to arrange in asc order , then on first outer loop iteration max value goes to the right.
 When Trying to arrange in desc order , then on first outer loop iteration min value goes to the right . 
+
+
+Logic to check the changes in inner and outer loop 
+
+class Hello{
+    public static void main(String srgs[]){
+        int nums[] = {91,15,78,113,27,14};
+
+        System.out.print("Before Sorting ---> ");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+        System.out.println();
+        int temp = 0 ; 
+        for(int i=0;i<nums.length-1;i++){
+            System.out.println("i-> " + i);
+            for(int j=0;j<nums.length-1;j++){
+                if(nums[j] > nums[j+1]){
+                    temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp ;
+                } 
+                System.out.print("j-> " + j + " ---> ");
+                for(int n : nums){
+                    System.out.print(n + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            for(int n : nums){
+                System.out.print(n + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.print("After Sorting ---> ");
+        for(int n : nums){
+            System.out.print(n + " ");
+        }
+    }
+}
+
+O/P :
+
+Before Sorting ---> 91 15 78 113 27 14 
+i-> 0
+j-> 0 ---> 15 91 78 113 27 14 
+j-> 1 ---> 15 78 91 113 27 14 
+j-> 2 ---> 15 78 91 113 27 14 
+j-> 3 ---> 15 78 91 27 113 14 
+j-> 4 ---> 15 78 91 27 14 113 
+
+15 78 91 27 14 113 
+i-> 1
+j-> 0 ---> 15 78 91 27 14 113 
+j-> 1 ---> 15 78 91 27 14 113
+j-> 2 ---> 15 78 27 91 14 113
+j-> 3 ---> 15 78 27 14 91 113
+j-> 4 ---> 15 78 27 14 91 113
+
+15 78 27 14 91 113
+i-> 2
+j-> 0 ---> 15 78 27 14 91 113
+j-> 1 ---> 15 27 78 14 91 113
+j-> 2 ---> 15 27 14 78 91 113 
+j-> 3 ---> 15 27 14 78 91 113
+j-> 4 ---> 15 27 14 78 91 113
+
+15 27 14 78 91 113
+i-> 3
+j-> 0 ---> 15 27 14 78 91 113
+j-> 1 ---> 15 14 27 78 91 113
+j-> 2 ---> 15 14 27 78 91 113
+j-> 3 ---> 15 14 27 78 91 113
+j-> 4 ---> 15 14 27 78 91 113
+
+15 14 27 78 91 113
+i-> 4
+j-> 0 ---> 14 15 27 78 91 113
+j-> 1 ---> 14 15 27 78 91 113
+j-> 2 ---> 14 15 27 78 91 113
+j-> 3 ---> 14 15 27 78 91 113
+j-> 4 ---> 14 15 27 78 91 113
+
+14 15 27 78 91 113
+
+After Sorting ---> 14 15 27 78 91 113
 ---------------------------------------------------------------------------------------------------------------
 Selection Sort : (Time Complexity - O(n2)
 
