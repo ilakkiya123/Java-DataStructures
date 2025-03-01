@@ -1,0 +1,30 @@
+Data Structures :
+
+Datas  
+
+Abstract data type - Data <-> Operation <-> Concept 
+
+It mainly involves on how data is operated than the ideaology of how it is implemented .
+
+Array , memory address and index 
+
+Read , Search , Insert 
+
+Product work -> Optimisation 
+
+Space Complexity - less memory 
+Time Complexity - less time 
+
+O(1) - constant - to check odd or even , to check first element in an array how large the array is 
+O(n) - linear - to find the sum of the element , to traverse to find the largest number 
+O(log n ) - Binary Search 
+O(n log n ) - Merge Sort 
+O(n2) - Bubble Sort 
+
+
+O(1)  - Constant - to find the first ele in an array 
+O(n)  - Linear - for loop to traverse in all elements 
+O(log n ) - Logarthmic - Binary Search
+O(n^2) - Quadratic -  2 for loops 
+O(2^n) - Exponential - Fibonacci recursion 
+O(n log n ) - Merge Sort 
